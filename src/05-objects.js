@@ -8,7 +8,8 @@
  * // person might be { name: 'John Doe', age: 30, city: 'New York' }
  */
 function createPersonObject() {
-
+    let person = {name:"John Doe", age: 30, city: "New York"}
+    return person
 }
 
 
@@ -23,7 +24,7 @@ function createPersonObject() {
  * // personName will be 'John Doe'
  */
 function getPersonName(person) {
-
+return person.name
 }
 
 

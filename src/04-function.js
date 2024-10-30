@@ -9,7 +9,7 @@
  * const message = generateMessage("Jack", 25); // "Hey Jack, happy 25 birthday!"
  */
 function generateMessage(name, age) {
-
+return `Hey ${name}, happy ${age} birthday!`
 }
 
 /**
@@ -22,8 +22,10 @@ function generateMessage(name, age) {
  * const title = titleCase("hello world"); // title will be "Hello World"
  */
 function titleCase(sentence) {
-
+    const finalSentence = sentence.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+return finalSentence
 }
+//kode taget fra https://www.freecodecamp.org/news/how-to-capitalize-words-in-javascript/
 
 /**
  * This function returns the sum of a range of numbers in an array.
@@ -36,7 +38,11 @@ function titleCase(sentence) {
  * const sum = sumOfRange(1, 4); // sum will be 10
  */
 function sumOfRange(start, end) {
-
+let sum = 0
+    for (let i = start; i <= end; i++) {
+        sum += i;
+    }
+    return sum
 }
 
 
@@ -51,10 +57,10 @@ function sumOfRange(start, end) {
  * const anotherAcronym = generateAcronym("Federal Bureau Investigation"); // anotherAcronym will be "FBI"
  */
 function generateAcronym(sentence) {
-
+const acronym = sentence.split(" ").map(word => word.charAt(0).toUpperCase()).join("");
+return acronym
 }
-
-
+//kode taget fra https://dev.to/codewithshan/create-a-javascript-tool-to-generate-acronym-from-user-input-2ib7
 /**
  * This function counts consonants in a string, with lowercase counting as 1 and uppercase as 2.
  *

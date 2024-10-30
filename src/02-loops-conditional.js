@@ -10,7 +10,11 @@
  */
 
 function isEven(number) {
-
+    if (number % 2 === 0) {
+        return true;
+    } else {
+        return false ;
+    }
 }
 
 /**
@@ -27,7 +31,11 @@ function isEven(number) {
  */
 
 function isWithinRange(n, min, max) {
-
+    if (n >= min && n <= max) {
+        return true
+    } else {
+        return false
+    }
 }
 
 /**
@@ -43,9 +51,10 @@ function isWithinRange(n, min, max) {
  */
 
 function stringContainsBa(string) {
-
+const checkForBa = "ba"
+    return string.includes(checkForBa)
 }
-
+//kode taget fra https://sentry.io/answers/string-contains-substring-javascript/
 
 /**
  * This function calculates the sum of each digit raised to its position.
